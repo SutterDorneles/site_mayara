@@ -47,9 +47,9 @@
           <li><a href="#">Serviços</a></li>
         </ul>
 
-        <div class="busca">
+        <!-- <div class="busca">
           <input type="text" placeholder="Pesquisar" />
-        </div>
+        </div> -->
 
         <ul class="social-icons">
           <li>
@@ -173,50 +173,53 @@
           </p>
         </article>
       </section>
+
       <!--
             Espaço para contatos e outras redes sociais
         -->
-      <div class="contato">
-        <div id="contato">
-          <h2>Contato</h2>
-          <p>
-            Aqui você encontra nossas redes sociais e outras formas de contato.
-            Siga-nos para receber atualizações e informações sobre nossos
-            serviços.
-          </p>
-          <ul>
-            <li>
-              <a href="https://wa.me/5548999472909" target="_blank"
-                ><img src="imagens/whatsapp50.webp" alt="Whatsapp"
-              /></a>
-            </li>
-            <li>
-              <a
-                href="https://www.instagram.com/psicologamayarazandonai/"
-                target="_blank"
-                ><img src="imagens/instagram50.webp" alt="instagram"
-              /></a>
-            </li>
-            <li>
-              <a
-                href="https://www.youtube.com/@psicologamayarazandonai"
-                target="_blank"
-                ><img src="imagens/instagram50.webp" alt="Youtube"
-              /></a>
-            </li>
-          </ul>
-        </div>
-        <div id="formulario">
-          <h2>Ou preencha o formulário abaixo que entraremos em contato.</h2>
-          <form id="contact" action="" method="GET">
+
+      <div class="contact">
+        <h2>Contato</h2>
+        <p>
+          Aqui você encontra nossas redes sociais e outras formas de contato.
+          Siga-nos para receber atualizações e informações sobre nossos
+          serviços.
+        </p>
+        <ul>
+          <li>
+            <a href="https://wa.me/5548999472909" target="_blank"
+              ><img src="imagens/whatsapp50.webp" alt="Whatsapp"
+            /></a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/psicologamayarazandonai/"
+              target="_blank"
+              ><img src="imagens/instagram50.webp" alt="instagram"
+            /></a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/@psicologamayarazandonai"
+              target="_blank"
+              ><img src="imagens/instagram50.webp" alt="Youtube"
+            /></a>
+          </li>
+        </ul>
+
+        <!-- FORMULÁRIO // FORM -->
+
+        <div class="formulario">
+          <h2>Se preferir, preencha o formulário abaixo.</h2>
+          <form class="form" action="" method="GET">
             <fieldset name="inputs-contact">
               <legend>Preencha seus dados:</legend>
               <p>
-                <label for="txtNome">Nome</label>
+                <label for="txtNome">Nome:</label>
                 <input id="txtNome" type="text" />
               </p>
               <p>
-                <label for="txtEmail">E-mail</label>
+                <label for="txtEmail">E-mail:</label>
                 <input
                   id="txtEmail"
                   type="email"
@@ -225,7 +228,7 @@
                 />
               </p>
               <p>
-                <label for="txtmensagem">Mensagem</label>
+                <label for="txtmensagem">Mensagem:</label>
                 <textarea
                   name="mensagem"
                   id="txtmensagem"
@@ -254,7 +257,9 @@
           </form>
         </div>
       </div>
+
       <!--INSERÇÃO DE UM VÍDEO DO YOUTUBE-->
+
       <h2>Vídeo de apresentação</h2>
       <div class="video">
         <iframe
@@ -268,7 +273,9 @@
         >
         </iframe>
       </div>
+
       <!--BENFÍCIOS DA TERAPIA-->
+
       <div class="beneficios">
         <h2>Benefícios da terapia</h2>
         <img
@@ -307,14 +314,30 @@
           alt="psicológa mayara zandonai segurando seu cartão pessoal com as duas mãos em direção à câmera."
         />
       </div>
+
       <!--Apresentação do EBOOK sobre ansiedade-->
-      <div id="ebook">
-        <a href="ebook.html">E-book: Aprendendo a lidar com a ansiedade</a>
-        <img
-          src="https://source.unsplash.com/random/400x300/?book"
-          alt="Ebook ansiedade"
-        />
-      </div>
+
+      <section>
+        <div class="title">
+          <h2>E-book: Aprendendo a lidar com a ansiedade</h2>
+        </div>
+        <article class="ebook">
+          <p>
+            Descubra maneiras eficazes de enfrentar a ansiedade e recuperar o
+            controle de sua vida com meu novo ebook "Apendendo a lidar com a
+            ansiedade: Guia prático para controle da ansiedade". Neste guia
+            abrangente, mergulhe em técnicas comprovadas para lidar com os
+            desafios da ansiedade, desde a compreensão das causas subjacentes
+            até a implementação de ferramentas práticas de autocuidado. Explore
+            um caminho transformador para superar a ansiedade e redescobrir uma
+            sensação de paz interior. Prepare-se para embarcar nesta jornada de
+            autodescoberta e fortalecimento emocional.
+            <a href="ebook.html">Adquira o seu!</a>
+          </p>
+
+          <img src="imagens/ebook.JPG" alt="Ebook sobre ansiedade" />
+        </article>
+      </section>
 
       <!--PARTE QUE APRESENTA OS DEPOIMENTOS (REVIEWS) DE OUTROS PACIENTES-->
 
@@ -325,15 +348,20 @@
         </div>
         <!-- review -->
         <article class="review">
-          <div class="img-container">
-            <img src="imagens/cop.ico" id="person-img" alt="" />
-          </div>
-          <h4 id="author">Pedro Paulo da Silva</h4>
-          <p id="job">Policial</p>
+          <h3 id="author">Isabela</h3>
           <p id="info">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio sed
-            minus error dolor quo a iusto quasi odit aliquam? Omnis eius at
-            sunt, voluptatibus optio libero incidunt ut quas aliquid.
+            Iniciar a terapia não foi uma decisão fácil. Sempre tive muito
+            receio, pois não tinha condições no meu atual momento de vida, e o
+            deslocamento até uma clínica não era uma opção pra mim. Até que
+            conheci a Mayara, e nunca me senti tão acolhida por alguém em toda
+            minha vida. No conforto da minha casa, sempre que eu preciso, ela
+            está lá. Com a terapia e a ajuda da Mayara, estou me tornando uma
+            mulher mais forte, amadurecida e muito mais feliz! Aprendi sobre meu
+            autoconhecimento e sobre a ver a vida sobre duas visões! Sem
+            dúvidas, deveria ter começado antes e estou longe de acabar, mas
+            certa de que, o nosso caminho está sendo lindo! Obrigada May, por
+            todo o carinho! Sem dúvidas, uma psicóloga que ama o que faz e que
+            nos ajuda com muito carinho! Assinado, Isabela.
           </p>
           <!-- prev next buttons -->
           <div class="button-container">
