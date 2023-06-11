@@ -71,14 +71,18 @@ Global Styles
   box-sizing: border-box;
 }
 body {
+  /* Deixar os contornos das fontes mais suaves */
+  -webkit-font-smoothing: antialiased;
+
   font-family: var(--fonte-padrao);
   background: var(--clr-grey-10);
-  color: var(--clr-grey-1);
+  color: var(--co0);
   line-height: 1.5;
   font-size: 0.875rem;
   width: 100%;
   height: 100%;
   margin: 0 auto;
+  padding: 0;
 }
 ul {
   list-style-type: none;
@@ -94,7 +98,7 @@ h4 {
   text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
-  font-family: var(--ff-primary);
+  font-family: var(--fonte-padrao);
 }
 h1 {
   font-size: 3rem;
@@ -110,17 +114,17 @@ h4 {
 }
 p {
   margin-bottom: 1.25rem;
-  color: var(--clr-grey-5);
+  color: var(--cor4);
 }
 @media screen and (min-width: 800px) {
   h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   h3 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
   h4 {
     font-size: 1rem;
@@ -154,18 +158,12 @@ p {
   }
 }
 
-main {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-}
-
 :root {
-  --cor0: rgba(214, 207, 212, 0.596);
-  --cor1: rgba(179, 173, 177, 0.596);
-  --cor2: rgba(134, 130, 133, 0.712);
-  --cor3: rgba(99, 94, 97, 0.774);
-  --cor4: rgba(66, 64, 66, 0.774);
+  --cor0: #f2f2f2;
+  --cor1: #d9d9d9;
+  --cor2: #a6a6a6;
+  --cor3: #8c8c8c;
+  --cor4: #0d0d0d;
 }
 
 /*
@@ -188,7 +186,7 @@ nav {
 
 .nav-toggle {
   font-size: 1.5rem;
-  color: var(--clr-primary-5);
+  color: var(--cor2);
   background: transparent;
   border-color: transparent;
   transition: var(--transition);
@@ -254,7 +252,7 @@ nav {
   border: 1px solid gray;
 } */
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1200px) {
   .nav-center {
     max-width: 1540px;
     margin: 0 auto;
@@ -301,11 +299,12 @@ MAIN
 main {
   display: flex;
   flex-direction: column;
-  background-color: var(--clr-grey-10);
+  background-color: var(--cor0);
   padding: 20px;
   border-radius: 10px;
-  min-width: 350px;
-  max-width: 1500px;
+  width: 100%;
+  min-width: 320px;
+  max-width: 1400px;
   margin: 0 auto;
   margin-bottom: 30px;
   margin-top: 15px;
@@ -326,30 +325,47 @@ main strong {
   font-weight: bold;
 }
 
-/* Parte do começo que insere uma imagem e um texto*/
+/*
+=============== 
+INICIO // PERFIL
+===============
+*/
 
-#perfil {
+.perfil {
   display: flex;
-  flex: 1;
   justify-content: space-evenly;
   flex-flow: row wrap;
+  row-gap: 20px;
 }
 
-#perfil img {
-  width: 500px;
+.perfil img {
   border: solid purple;
+  max-width: 60%;
 }
 
-#txt-perfil {
+.txt-perfil {
   flex: 0 35%;
+  min-width: 300px;
   align-self: center;
   padding: 40px;
-  background-color: var(--cor2);
+  background-color: var(--cor1);
   border-radius: 30%;
 }
 
-#txt-perfil h2 {
+.txt-perfil h2 {
   text-align: center;
+}
+
+/*
+=============== 
+WELCOME
+===============
+*/
+
+.welcome {
+  max-width: 100%;
+  column-count: 2;
+  padding: 50px;
 }
 
 /*
@@ -358,20 +374,27 @@ ABOUT-ME
 ===============
 */
 
-#about-me {
+.about-me {
   display: flex;
   flex-flow: row wrap;
+  padding: 15px;
   margin: 0px 0px 50px 0px;
-  justify-content: space-around;
+  justify-content: center;
+  align-content: center;
+  column-gap: 20px;
+  background-color: var(--cor1);
   align-items: center;
 }
 
-#about-me article {
-  flex: 0 40%;
+.about-me article {
+  flex: 2;
+  min-width: 300px;
 }
 
-#about-me img {
+.about-me img {
   border-radius: 10%;
+  flex: 1;
+  max-width: 600px;
 }
 
 /* Parte do CONTATO*/
@@ -381,6 +404,7 @@ ABOUT-ME
   flex-flow: column wrap;
   align-items: center;
   margin-bottom: 50px;
+  max-width: 100%;
 }
 
 .contact ul {
@@ -398,7 +422,7 @@ FORM / FORMULÁRIO
 */
 
 .form {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
 }
@@ -419,7 +443,7 @@ VIDEO
 */
 
 .video {
-  background-color: var(--cor4);
+  background-color: var(--cor3);
   margin: 0px 0px 50px 0px;
   position: relative;
   padding-bottom: 50%;
@@ -437,18 +461,21 @@ VIDEO
 /* Parte dos BENEFÍCIOS DA TERAPIA*/
 
 .beneficios {
+  max-width: 100%;
   display: flex;
   flex-flow: row wrap;
-  column-gap: 150px;
-  justify-content: center;
+  column-gap: 0 px;
+  justify-content: space-around;
   margin: 0 0 50px 0;
   row-gap: 15px;
+  background-color: var(--cor1);
+  align-content: center;
 }
 
 .beneficios h2 {
   flex: 100%;
   text-align: center;
-  margin-bottom: 40px;
+  margin: 40px;
 }
 
 .terapia-ajuda {
@@ -456,9 +483,7 @@ VIDEO
 }
 
 .beneficios img {
-  height: auto;
-  width: auto;
-  max-width: 500px;
+  max-width: 40%;
   border-radius: 60%;
 }
 
@@ -469,6 +494,9 @@ VIDEO
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
+
+  width: 40%;
+  text-align: center;
 }
 
 /*
@@ -487,11 +515,11 @@ EBOOK
 }
 
 .ebook p {
-  width: 30%;
+  width: 40%;
 }
 
 .ebook img {
-  height: 600px;
+  max-width: 60%;
 }
 
 .ebook a {
@@ -515,15 +543,29 @@ DEPOIMENTOS/ COMENTÁRIOS
 ===============
 */
 
+.comments {
+  width: 100%;
+  background-color: var(--cor2);
+  border: 30px var(--cor1) solid;
+  border-radius: 10%;
+  background-image: linear-gradient(
+    60deg,
+    var(--cor0),
+    var(--cor1),
+    var(--cor2)
+  );
+}
+
 .title {
   text-align: center;
   margin-bottom: 30px;
+  padding: 30px;
 }
 
 .review {
   display: flex;
   flex-flow: column wrap;
-  width: 600px;
+  width: 90%;
   margin: 0 auto;
   align-items: center;
   margin-bottom: 50px;
@@ -538,6 +580,10 @@ DEPOIMENTOS/ COMENTÁRIOS
 PERGUNTAS FREQUENTES // QUESTIONS
 ===============
 */
+
+.questions {
+  width: 100%;
+}
 
 .question-title {
   display: flex;

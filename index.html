@@ -13,10 +13,14 @@
     <link rel="shortcut icon" href="imagens/cop.ico" type="image/x-icon" />
     <title>Psicóloga Mayara Zandonai</title>
     <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
@@ -31,7 +35,10 @@
       <div class="nav-center">
         <!-- Nav-header -->
         <div class="nav-header">
-          <img src="imagens/logo.png" class="logo" alt="logo" />
+          <picture>
+            <source media="(min-width: )" srcset="" />
+            <img src="imagens/logo.png" class="logo" alt="logo" />
+          </picture>
           <button class="nav-toggle">
             <i class="fas fa-bars"></i>
           </button>
@@ -77,9 +84,9 @@
 
     <!--Parte inicial em que se coloca uma imagem da profissional e uma frase-->
     <main>
-      <section id="perfil">
-        <img src="imagens/perfil.jpeg" alt="Mayara_Zandonai" />
-        <div id="txt-perfil">
+      <section class="perfil">
+        <img src="imagens/perfil-500.jpeg" alt="Mayara_Zandonai" />
+        <div class="txt-perfil">
           <h2>Mayara Zandonai</h2>
           <p>
             Te ensino a contruir recursos emocionais e modificar padrões
@@ -90,9 +97,9 @@
         </div>
       </section>
 
-      <!-- BOAS VINDAS AO SITE -->
+      <!-- BOAS VINDAS AO SITE // WELCOME-->
 
-      <article>
+      <article class="welcome">
         <p>Olá, sejam todos bem vindos ao meu site.</p>
         <p>
           Meu nome é <strong>Mayara de Oliveira Zandonai</strong>, trabalho como
@@ -148,15 +155,16 @@
 
       <!--ABOUT-ME // Parte do site em que se faz o SOBRE MIM - apresentação da profissional -->
 
-      <section id="about-me">
-        <div>
+      <section class="about-me">
+        <picture>
+          <source media="(max-width: 600px )" srcset="imagens/psi_mayara-300.jpeg"/>
           <img
             src="imagens/psi_mayara_reduzido.jpg"
             alt="Psicóloga Mayara de Oliveira Zandonai"
             title="Mayara Zandonai"
             height="350px"
           />
-        </div>
+        </picture>
 
         <article>
           <p>
@@ -178,7 +186,7 @@
             Espaço para contatos e outras redes sociais
         -->
 
-      <div class="contact">
+      <section class="contact">
         <h2>Contato</h2>
         <p>
           Aqui você encontra nossas redes sociais e outras formas de contato.
@@ -256,7 +264,7 @@
             </fieldset>
           </form>
         </div>
-      </div>
+      </section>
 
       <!--INSERÇÃO DE UM VÍDEO DO YOUTUBE-->
 
@@ -276,7 +284,7 @@
 
       <!--BENFÍCIOS DA TERAPIA-->
 
-      <div class="beneficios">
+      <section class="beneficios">
         <h2>Benefícios da terapia</h2>
         <img
           src="imagens/cartao-maos-red.jpeg"
@@ -310,10 +318,10 @@
           <button>Saiba mais</button>
         </div>
         <img
-          src="imagens/livro-tcc.jpeg"
+          src="imagens/livro-tcc-400.jpeg"
           alt="psicológa mayara zandonai segurando seu cartão pessoal com as duas mãos em direção à câmera."
         />
-      </div>
+      </section>
 
       <!--Apresentação do EBOOK sobre ansiedade-->
 
