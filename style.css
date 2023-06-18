@@ -152,11 +152,11 @@ p {
   max-width: 1170px;
 }
 
-@media screen and (min-width: 992px) {
+/* @media screen and (min-width: 992px) {
   .section-center {
     width: 95vw;
   }
-}
+} */
 
 :root {
   --cor0: #f2f2f2;
@@ -164,6 +164,21 @@ p {
   --cor2: #a6a6a6;
   --cor3: #8c8c8c;
   --cor4: #0d0d0d;
+}
+
+/*
+================================================== 
+Para dispositivos menores que 600 px (SMARTPHONES_
+==================================================
+*/
+
+@media (max-width: 650px) {
+  .txt-perfil {
+    min-width: 100%;
+  }
+  .ebook__article p {
+    min-width: 100%;
+  }
 }
 
 /*
@@ -283,6 +298,7 @@ nav {
   .social-icons {
     display: flex;
     gap: 10px;
+    font-size: 50px;
   }
 
   .social-icons a:hover {
@@ -345,7 +361,6 @@ INICIO // PERFIL
 
 .txt-perfil {
   flex: 0 35%;
-  min-width: 300px;
   align-self: center;
   padding: 40px;
   background-color: var(--cor1);
@@ -384,17 +399,17 @@ ABOUT-ME
   column-gap: 20px;
   background-color: var(--cor1);
   align-items: center;
+  max-width: 100%;
 }
 
 .about-me article {
   flex: 2;
-  min-width: 300px;
 }
 
 .about-me img {
   border-radius: 10%;
   flex: 1;
-  max-width: 600px;
+  max-width: 100%;
 }
 
 /* Parte do CONTATO*/
@@ -405,6 +420,7 @@ ABOUT-ME
   align-items: center;
   margin-bottom: 50px;
   max-width: 100%;
+  min-width: 300px;
 }
 
 .contact ul {
@@ -413,6 +429,7 @@ ABOUT-ME
   justify-content: space-between;
   width: 80%;
   margin-bottom: 30px;
+  font-size: 50px;
 }
 
 /*
@@ -421,19 +438,28 @@ FORM / FORMULÁRIO
 ===============
 */
 
-.form {
-  width: 100%;
+.formulario {
+  max-width: 100%;
   margin: 0 auto;
   text-align: center;
 }
 
+.form {
+  display: block;
+  max-width: 100%;
+}
+
 .form label {
   font-size: 1.2rem;
-  text-align: ;
+  text-align: center;
 }
 
 .form input {
   height: 30px;
+}
+
+#txtmensagem {
+  width: 50%;
 }
 
 /*
@@ -505,7 +531,7 @@ EBOOK
 ===============
 */
 
-.ebook {
+.ebook__article {
   display: flex;
   justify-content: space-evenly;
   flex-flow: row wrap;
@@ -573,6 +599,11 @@ DEPOIMENTOS/ COMENTÁRIOS
 
 .img-container img {
   width: 200px;
+}
+
+.prev-button,
+.next-button {
+  font-size: 2em;
 }
 
 /*

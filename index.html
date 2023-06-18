@@ -25,6 +25,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
+
+    <!-- ================= UNICONS ======================= -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
   </head>
 
   <!--MENU INICIAL-->
@@ -46,12 +52,14 @@
         <!-- links -->
 
         <ul class="links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Sobre mim</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contato</a></li>
-          <li><a href="#">Media</a></li>
-          <li><a href="#">Serviços</a></li>
+          <li>
+            <a href="#"><i class="uil uil-estate"></i></a>
+          </li>
+          <li><a href="#about-me">Sobre mim</a></li>
+          <li><a href="#ebook">E-book</a></li>
+          <li><a href="#contact">Contato</a></li>
+          <li><a href="#media">Media</a></li>
+          <li><a href="#comments">Depoimentos</a></li>
         </ul>
 
         <!-- <div class="busca">
@@ -63,20 +71,20 @@
             <a
               href="https://www.instagram.com/psicologamayarazandonai/"
               target="_blank"
-              ><img src="imagens/instagram50.webp" alt=""
-            /></a>
+              ><i class="uil uil-instagram-alt"></i
+            ></a>
           </li>
           <li>
-            <a href="https://wa.me/5548999472909" target="_blank"
-              ><img src="imagens/whatsapp50.webp" alt=""
-            /></a>
+            <a href="https://wa.me/5548999472909" target="_blank">
+              <i class="uil uil-whatsapp"></i>
+            </a>
           </li>
           <li>
             <a
               href="https://www.youtube.com/@psicologamayarazandonai"
               target="blank"
-              ><img src="imagens/youtube50.png" alt=""
-            /></a>
+              ><i class="uil uil-youtube"></i
+            ></a>
           </li>
         </ul>
       </div>
@@ -155,9 +163,12 @@
 
       <!--ABOUT-ME // Parte do site em que se faz o SOBRE MIM - apresentação da profissional -->
 
-      <section class="about-me">
+      <section class="about-me" id="about-me">
         <picture>
-          <source media="(max-width: 600px )" srcset="imagens/psi_mayara-300.jpeg"/>
+          <source
+            media="(max-width: 600px )"
+            srcset="imagens/psi_mayara-300.jpeg"
+          />
           <img
             src="imagens/psi_mayara_reduzido.jpg"
             alt="Psicóloga Mayara de Oliveira Zandonai"
@@ -186,7 +197,7 @@
             Espaço para contatos e outras redes sociais
         -->
 
-      <section class="contact">
+      <section class="contact" id="contact">
         <h2>Contato</h2>
         <p>
           Aqui você encontra nossas redes sociais e outras formas de contato.
@@ -196,22 +207,22 @@
         <ul>
           <li>
             <a href="https://wa.me/5548999472909" target="_blank"
-              ><img src="imagens/whatsapp50.webp" alt="Whatsapp"
-            /></a>
+              ><i class="uil uil-whatsapp-alt"></i
+            ></a>
           </li>
           <li>
             <a
               href="https://www.instagram.com/psicologamayarazandonai/"
               target="_blank"
-              ><img src="imagens/instagram50.webp" alt="instagram"
-            /></a>
+              ><i class="uil uil-instagram-alt"></i
+            ></a>
           </li>
           <li>
             <a
               href="https://www.youtube.com/@psicologamayarazandonai"
               target="_blank"
-              ><img src="imagens/instagram50.webp" alt="Youtube"
-            /></a>
+              ><i class="uil uil-youtube"></i
+            ></a>
           </li>
         </ul>
 
@@ -268,19 +279,21 @@
 
       <!--INSERÇÃO DE UM VÍDEO DO YOUTUBE-->
 
-      <h2>Vídeo de apresentação</h2>
-      <div class="video">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/MW-mLt6eib8"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        >
-        </iframe>
-      </div>
+      <section class="media" id="media">
+        <h2>Vídeo de apresentação</h2>
+        <div class="video">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/MW-mLt6eib8"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+      </section>
 
       <!--BENFÍCIOS DA TERAPIA-->
 
@@ -325,11 +338,11 @@
 
       <!--Apresentação do EBOOK sobre ansiedade-->
 
-      <section>
+      <section class="ebook" id="ebook">
         <div class="title">
           <h2>E-book: Aprendendo a lidar com a ansiedade</h2>
         </div>
-        <article class="ebook">
+        <article class="ebook__article">
           <p>
             Descubra maneiras eficazes de enfrentar a ansiedade e recuperar o
             controle de sua vida com meu novo ebook "Apendendo a lidar com a
@@ -349,7 +362,7 @@
 
       <!--PARTE QUE APRESENTA OS DEPOIMENTOS (REVIEWS) DE OUTROS PACIENTES-->
 
-      <section class="comments">
+      <section class="comments" id="comments">
         <!--title-->
         <div class="title">
           <h2>Depoimentos que guardo com carinho:</h2>
@@ -373,8 +386,8 @@
           </p>
           <!-- prev next buttons -->
           <div class="button-container">
-            <button class="prev-button">Anterior</button>
-            <button class="next-button">Próximo</button>
+            <button class="prev-button"><i class="uil uil-arrow-circle-left"></i></button>
+            <button class="next-button"><i class="uil uil-arrow-circle-right"></i></button>
           </div>
         </article>
       </section>
