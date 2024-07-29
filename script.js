@@ -12,6 +12,8 @@ btnLinks.addEventListener("click", function () {
   links.classList.toggle("show-links");
 });
 
+
+
 // TOGGLE GENERAL QUESTIONS
 questions = document.querySelectorAll(".question");
 questions.forEach(function (question) {

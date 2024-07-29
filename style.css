@@ -667,3 +667,49 @@ footer a:hover {
   text-decoration: underline;
   color: yellowgreen;
 }
+
+
+/* Estilos para telas pequenas */
+@media (max-width: 768px) {
+  .nav-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .links {
+    flex-direction: column;
+    display: none; /* Oculta links para dispositivos móveis */
+  }
+
+  .nav-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-toggle.active + .links {
+    display: flex; /* Mostra links quando o botão é clicado */
+  }
+}
+
+/* Estilos para telas ainda menores */
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+  }
+
+  .perfil img {
+    width: 100%; /* Ajusta a imagem de perfil para largura total em telas pequenas */
+  }
+
+  .txt-perfil {
+    text-align: center;
+  }
+
+  .txt-perfil h2 {
+    font-size: 1.5rem;
+  }
+
+  .txt-perfil p {
+    font-size: 0.875rem;
+  }
+}
