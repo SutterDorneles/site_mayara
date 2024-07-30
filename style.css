@@ -267,45 +267,6 @@ nav {
   border: 1px solid gray;
 } */
 
-@media screen and (min-width: 1200px) {
-  .nav-center {
-    max-width: 1540px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-  }
-
-  .nav-header {
-    padding: 0;
-  }
-
-  .nav-toggle {
-    display: none;
-  }
-
-  .links {
-    height: auto;
-    display: flex;
-  }
-
-  .links a:hover {
-    padding: 0;
-    background: transparent;
-  }
-
-  .social-icons {
-    display: flex;
-    gap: 10px;
-    font-size: 50px;
-  }
-
-  .social-icons a:hover {
-    color: var(--clr-primary-7);
-  }
-}
-
 /*
 =============== 
 MAIN
@@ -520,8 +481,6 @@ VIDEO
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
-
-  width: 40%;
   text-align: center;
 }
 
@@ -697,8 +656,9 @@ footer a:hover {
     width: 95%;
   }
 
-  .perfil img {
+  .perfil img, .tcc img {
     width: 100%; /* Ajusta a imagem de perfil para largura total em telas pequenas */
+  
   }
 
   .txt-perfil {
